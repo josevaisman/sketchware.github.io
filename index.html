@@ -7,6 +7,12 @@
 
 <html>
 	<head>
+		<meta property="og:type" content="product">
+		<meta property="og:title" content="Sketchware">
+		<meta property="og:url" content="https://sketchware.github.io/">
+		<meta property="og:image" content="https://sketchware.github.io/sketchware.png">
+		<meta property="product:price:amount" content="0">
+		<meta property="product:price:currency" content="USD">
 		<title>Sketchware</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -25,9 +31,9 @@
 				<div class="content">
 					<h1><a href="#">Sketchware</a></h1>
 					<p>Android App Development <br />
-					made simple by <a href="http://html5up.net">BeSome</a></p>
+					made simple by <a href="http://besome.co.kr">BeSome</a></p>
 					<ul class="actions">
-						<li><a href="#" class="button special icon fa-download">Download</a></li>
+						<li><a href="https://play.google.com/store/apps/details?id=com.besome.sketch&hl=en" class="button special icon fa-download">Download</a></li>
 						<li><a href="#one" class="button icon fa-chevron-down scrolly">Learn More</a></li>
 					</ul>
 				</div>
@@ -463,55 +469,4 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<script src="assets/js/main.js"></script>
 
 	</body>
-
-
-	<script>
-		$( document ).ready(function() {
-				$(function() {
-			var theImage = $('ul#ss li img');
-			var theWidth = theImage.width();
-			//wrap into mother div
-			$('ul#ss').wrap('<div id="mother" />');
-			//assign height width and overflow hidden to mother
-			$('#mother').css({
-				width: function() {
-				return theWidth;
-				},
-				height: function() {
-				return theImage.height();
-				},
-				position: 'relative',
-				overflow: 'hidden'
-			});
-			//get total of image sizes and set as width for ul 
-			var totalWidth = theImage.length * theWidth;
-			$('ul').css({
-				width: function() {
-				return totalWidth;
-				}
-			});
-
-			var ss_timer = setInterval(function() {
-				ss_next();
-			}, 3000);
-
-			function ss_next() {
-				var a = $(".active");
-				a.removeClass('active');
-
-				if (a.hasClass('last')) {
-				//last element -- loop
-				a.parent('ul').animate({
-					"margin-left": (0)
-				}, 1000);
-				a.siblings(":first").addClass('active');
-				} else {
-				a.parent('ul').animate({
-					"margin-left": (-(a.index() + 1) * theWidth)
-				}, 1000);
-				a.next().addClass('active');
-				}
-			}
-			});
-	</script>
 </html>
