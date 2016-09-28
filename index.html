@@ -105,11 +105,10 @@
 
 			<section id="three" class="wrapper style2 special">
 				<header class="major">
-					<h2>Sign up to our newsletter!</h2>
-					
+					<h2>Sign up for our newsletter!</h2>
 				</header>
 				<div>
-					<div class="4u" style="width: 50%; margin: 0 auto; ">
+					<div class="search-bar" >
 						<form action="//github.us14.list-manage.com/subscribe/post?u=ba42c2cd4db967d52883e4a5d&amp;id=5505f64330" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
 							<input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" style="float: right" class="special" />
 							<div style="overflow: hidden; padding-right: .5em;">
@@ -474,58 +473,5 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<script src="assets/js/main.js"></script>
 
 	</body>
-<<<<<<< HEAD
-=======
 
-
-	<script>
-		$( document ).ready(function() {
-				$(function() {
-			var theImage = $('ul#ss li img');
-			var theWidth = theImage.width();
-			//wrap into mother div
-			$('ul#ss').wrap('<div id="mother" />');
-			//assign height width and overflow hidden to mother
-			$('#mother').css({
-				width: function() {
-				return theWidth;
-				},
-				height: function() {
-				return theImage.height();
-				},
-				position: 'relative',
-				overflow: 'hidden'
-			});
-			//get total of image sizes and set as width for ul 
-			var totalWidth = theImage.length * theWidth;
-			$('ul').css({
-				width: function() {
-				return totalWidth;
-				}
-			});
-
-			var ss_timer = setInterval(function() {
-				ss_next();
-			}, 3000);
-
-			function ss_next() {
-				var a = $(".active");
-				a.removeClass('active');
-
-				if (a.hasClass('last')) {
-				//last element -- loop
-				a.parent('ul').animate({
-					"margin-left": (0)
-				}, 1000);
-				a.siblings(":first").addClass('active');
-				} else {
-				a.parent('ul').animate({
-					"margin-left": (-(a.index() + 1) * theWidth)
-				}, 1000);
-				a.next().addClass('active');
-				}
-			}
-			});
-	</script>
->>>>>>> 48ec465c7c1b2fa6a2ea04ec108885b4c321ecb5
 </html>

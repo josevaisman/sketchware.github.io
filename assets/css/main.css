@@ -4,20 +4,14 @@
 	flex: 1;
 }
 
-* {
-  margin: 0;
-  padding: 0;
+.search-bar {
+	width: 50%; margin: 0 auto; 
 }
-#ss {
-  list-style: none;
-}
-#ss li {
-  float: left;
-}
-#ss img {
-  width: 200px;
-  height: 100px;
-}
+	@media only screen and (max-device-width: 480px) {
+		.search-bar {
+			width: 80%; margin: 0 auto; 
+		}
+	}
 
 /*
 */
